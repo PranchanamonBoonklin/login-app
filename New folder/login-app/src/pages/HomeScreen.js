@@ -31,7 +31,7 @@ const HomeScreen = ({ navigation }) => {
  return (
  <View style={styles.container}>
  <Appbar.Header style={styles.header}>
- <Appbar.Content title="หน้าหลัก" />
+ <Appbar.Content title="Welcome" />
  <Appbar.Action
  icon="logout"
  onPress={handleLogout}
@@ -40,7 +40,7 @@ const HomeScreen = ({ navigation }) => {
  </Appbar.Header>
 
  <View style={styles.content}>
- <Text style={styles.text}>ยินดีต้อนรับเข้าสู่แอปพลิเคชั่น </Text>
+ <Text style={styles.text}>TopChef Thai </Text>
  {user && (
  <Text style={styles.userText}>อีเมล: {user.email}</Text>
  )}
@@ -50,21 +50,14 @@ const HomeScreen = ({ navigation }) => {
  mode="contained"
  style={styles.button}
  onPress={() =>
- navigation.navigate("Details", {
- itemId: 101,
- title: "บทความแรก",
- })
+ navigation.navigate("Products")
  }
  >
-ไปที่หน้ารายละเอียด
+    ขายสินค้า
  </Button>
 
- <Button
- mode="contained"
- style={styles.button}
- onPress={() => navigation.navigate("Data")}>
- ไปที่หน้าข้อมูล
- </Button>
+
+ 
  </View>
  </View>
  </View>
@@ -75,7 +68,7 @@ const styles = StyleSheet.create({
  flex: 1,
  },
  header: {
- backgroundColor: '#6200ea',
+ backgroundColor: '#e982c7ff',
  },
  content: {
  flex: 1,
@@ -91,7 +84,7 @@ const styles = StyleSheet.create({
  userText: {
  fontSize: 16,
  marginBottom: 30,
- color: "#666",
+ color: "#020202ff",
  textAlign: "center",
  },
  buttonContainer: {
